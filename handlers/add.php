@@ -1,5 +1,5 @@
 <?php
-include '../database/database.php'; // Fix the include path
+include '../databasee/database.php'; 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get data from the form
@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $transportation = $_POST['transportation'];
 
     // Prepare the SQL query to insert the data
-    $stmt = $conn->prepare("INSERT INTO exptracker (Food, Bills, Rent, Transportation) VALUES (?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO tracker_tb (Food, Bills, Rent, Transportation) VALUES (?, ?, ?, ?)");
     $stmt->bind_param("iiii", $food, $bills, $rent, $transportation);
     
     // Execute the query and check for success
