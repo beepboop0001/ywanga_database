@@ -1,4 +1,4 @@
-<?php include '../database/database.php'; ?>
+<?php include '../databasee/database.php ';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,41 +47,24 @@
       </div>
     </form>
 
-    <!-- Display data in a table -->
-    <?php
-      $query = "SELECT * FROM exptracker ORDER BY Date_Time DESC";
-      $result = $conn->query($query);
-    ?>
+    
 
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th>Food</th>
-          <th>Bills</th>
-          <th>Rent</th>
-          <th>Transportation</th>
-          <th>Total Cost</th>
-          <th>Date</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php while ($row = $result->fetch_assoc()): ?>
-          <tr>
-            <td><?php echo $row['Food']; ?></td>
-            <td><?php echo $row['Bills']; ?></td>
-            <td><?php echo $row['Rent']; ?></td>
-            <td><?php echo $row['Transportation']; ?></td>
-            <td><?php echo $row['Total_Cost']; ?></td>
-            <td><?php echo $row['Date_Time']; ?></td>
-            <td>
-              <a href="edit.php?id=<?php echo $row['Tracker_ID']; ?>" class="btn btn-warning">Edit</a>
-              <a href="delete.php?id=<?php echo $row['Tracker_ID']; ?>" class="btn btn-danger">Delete</a>
-            </td>
-          </tr>
-        <?php endwhile; ?>
-      </tbody>
-    </table>
+
+
+
+    <!-- money generator -->
+    <div class="money-container">
+    <div class="money">&#128181;</div> <!-- 💵 -->
+    <div class="money">&#128181;</div>
+    <div class="money">&#128181;</div>
+    <div class="money">&#128181;</div>
+    <div class="money">&#128181;</div>
+    <div class="money">&#128181;</div>
+    <div class="money">&#128181;</div>
+    <div class="money">&#128181;</div>
+    <div class="money">&#128181;</div>
+    <div class="money">&#128181;</div>
+</div>
   </div>
 </div>
 
